@@ -32,9 +32,5 @@ CREATE TABLE bookings (
   FOREIGN KEY (event_id) REFERENCES events(id) ON DELETE CASCADE
 );
 
--- sample admin user (password: admin123)
 INSERT INTO users (name, email, password, role) VALUES ('Admin','admin@example.com', '{PASSWORD_PLACEHOLDER}', 'admin');
 
--- sample event
-INSERT INTO events (title, description, venue, event_date, capacity) VALUES
-('Campus Music Night', 'An evening of music by student bands.', 'Main Hall', '2025-11-15', 200);
